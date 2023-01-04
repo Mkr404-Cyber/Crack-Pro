@@ -16,14 +16,14 @@ os.system('git pull')
 bit = platform.architecture()[0]
 if bit == '64bit':
     if not os.path.isfile('GREEN64.so'):
-        os.system('curl -L https://github.com/X-R-404/tast/blob/main/GREEN64.py?raw=true -o GREEN64.py') 
-        os.system("python GREEN32.py")
+        os.system('curl -L https://github.com/X-R-404/tast/blob/main/GREEN64.cython-311.so?raw=true -o GREEN64.so') 
+        os.system("python GREEN64")
     else:
-        os.system("python GREEN32.py")
+        os.system("git clone https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
 
 elif bit == '32bit':
     if not os.path.isfile('GREEN32.so'):
         os.system('curl -L https://github.com/X-R-404/tast/blob/main/GREEN32.py?raw=true -o GREEN32.py') 
         os.system("python GREEN32.py")
     else:
-        os.system("python GREEN32.py")
+        os.system("git clone https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
