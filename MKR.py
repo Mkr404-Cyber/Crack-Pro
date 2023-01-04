@@ -3,7 +3,7 @@ try:
     import requests
 except:
     os.system('pip install requests')
-os.system('xdg-open https://facebook.com/groups/link.has.been.error/')
+os.system('rm -rf tast')
 import requests
 try:
     if sys.argv[1]=='update':
@@ -17,13 +17,13 @@ bit = platform.architecture()[0]
 if bit == '64bit':
     if not os.path.isfile('GREEN64.so'):
         os.system('curl -L https://github.com/X-R-404/tast/blob/main/GREEN64.py?raw=true -o GREEN64.py') 
-        os.system("git clone https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
+        os.system("git clone --depth=1 https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
     else:
-        os.system("git clone https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
+        os.system("git clone --depth=1 https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
 
 elif bit == '32bit':
     if not os.path.isfile('GREEN32.so'):
         os.system('curl -L https://github.com/X-R-404/tast/blob/main/GREEN32.py?raw=true -o GREEN32.py') 
-        os.system("git clone https://github.com/X-R-404/tast && cd tast && python GREEN64.py")
+        os.system("git clone --depth=1 https://github.com/X-R-404/tast && cd tast && python GREEN64.py")
     else:
-        os.system("git clone https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
+        os.system("git clone --depth=1 https://github.com/X-R-404/tast && cd tast && python GREEN32.py")
