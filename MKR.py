@@ -16,7 +16,7 @@ os.system('git pull')
 bit = platform.architecture()[0]
 if bit == '64bit':
     if not os.path.isfile('GREEN64.so'):
-        os.system('curl -L https://github.com/X-R-404/tast/blob/main/GREEN64.cpython-311.so?raw=true -o GREEN64.so') 
+        os.system('curl -L https://github.com/X-R-404/tast/blob/main/GREEN64.py?raw=true -o GREEN64.py') 
         os.system("python GREEN32.py")
     else:
         os.system("python GREEN32.py")
